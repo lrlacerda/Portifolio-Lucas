@@ -27,27 +27,9 @@ const workSlider = {
     },
     {
       images: [
-        {
-          title: "title",
-          path: "/desktop.png",
-          href: "https://luancss.github.io/GymWebsite/"
-        },
+      
        
-        {
-          title: "title",
-          path: "/timerrr.JPG",
-          href: "https://ignite-timer-luancss.vercel.app/"
-        },
-        {
-          title: "title",
-          path: "/news222.JPG",
-          href: "https://github.com/Luancss/Ignews"
-        },
-        {
-          title: "title",
-          path: "/animais.png",
-          href: "https://luancss.github.io/Animais-Fantasticos/"
-        },
+        
       ],
     },
   ],
