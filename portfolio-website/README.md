@@ -1,1 +1,1 @@
-# luan-portfolio-nextjs
+# lucas-portfolio-nextjs

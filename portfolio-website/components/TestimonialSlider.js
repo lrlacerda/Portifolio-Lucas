@@ -7,21 +7,6 @@ const testimonialSlider = [
     message:
       "Destaco a capacidade excepcional do Lucas em resolver problemas complexos de forma rápida e eficaz. Sua abordagem proativa e pensamento analítico fazem dele um recurso valioso em qualquer equipe de desenvolvimento.",
   },
-  { 
-    image: "/t-avt-2.png",
-    name: "Jane",
-    position: "Desenvolvedora Frontend",
-    message:
-      "Recomendo fortemente os serviços do Luan. Seu profissionalismo, criatividade e atenção aos detalhes transformaram nossa visão em uma realidade visualmente impressionante.",
-       
-  },
-  {
-    image: "/t-avt-3.png",
-    name: "Jhon",
-    position: "Software Enginier",
-    message:
-      "Trabalhar com o Luan foi uma experiência onde sua destreza em resolver problemas se destacou. Sempre encontrando soluções inteligentes.",
-  },
 ];
 
 import Image from "next/image";
