@@ -8,16 +8,16 @@ const workSlider = {
           path: "/Hospedagens.com.png",
           href: "https://lrlacerda.github.io/Hospedagens.com/",
         },
-        // {
-        //   title: "title",
-        //   path: "/HBO.png",
-        //   href: "https://lrlacerda.github.io/HBOmax/"
-        // },
-        // {
-        //   title: "title",
-        //   path: "/MundoInvertido.png",
-        //   href: "https://lrlacerda.github.io/Mundo-invertido/"
-        // },
+        {
+          title: "title",
+          path: "/HBO.png",
+          href: "https://lrlacerda.github.io/HBOmax/"
+        },
+        {
+          title: "title",
+          path: "/MundoInvertido.png",
+          href: "https://lrlacerda.github.io/Mundo-invertido/"
+        },
         {
           title: "title",
           path: "/ComprasEletronicos.png",
