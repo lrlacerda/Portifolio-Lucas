@@ -15,6 +15,38 @@ const projects = [
       "E-commerce completo já em produção, do catálogo ao checkout, construído com React no front-end e C# no back-end.",
   },
   {
+    title: "Assistente de LinkedIn com IA",
+    tech: ["JavaScript", "OpenAI", "Anthropic", "Azure AI"],
+    description:
+      "Extensão de navegador que analisa perfis do LinkedIn e sugere melhorias usando IA (OpenAI, Anthropic ou Azure AI Foundry).",
+    href: "https://github.com/lrlacerda/linkedin-ai-assistant",
+    repoHref: "https://github.com/lrlacerda/linkedin-ai-assistant",
+  },
+  {
+    title: "PSN Store Clone",
+    tech: ["Angular", "TypeScript"],
+    description:
+      "Clone da loja PlayStation Store construído com Angular e TypeScript.",
+    href: "https://github.com/lrlacerda/angular-psn-store",
+    repoHref: "https://github.com/lrlacerda/angular-psn-store",
+  },
+  {
+    title: "Gerenciador de Tarefas",
+    tech: ["React", "JavaScript"],
+    description:
+      "Aplicativo para organizar tarefas e compromissos do dia a dia, com formulários e validação em React.",
+    href: "https://react-web-formulario.vercel.app",
+    repoHref: "https://github.com/lrlacerda/React-Web-Formulario",
+  },
+  {
+    title: "CineSenai",
+    tech: ["React", "Vite"],
+    description:
+      "Sistema de catálogo e reservas de ingressos de cinema, front-end em React + Vite.",
+    href: "https://github.com/lrlacerda/CineSenai-Final",
+    repoHref: "https://github.com/lrlacerda/CineSenai-Final",
+  },
+  {
     title: "Hospedagens",
     path: "/Hospedagens.com.png",
     href: "https://lrlacerda.github.io/Hospedagens.com/",
@@ -44,38 +76,6 @@ const projects = [
     href: "https://github.com/lrlacerda/Spiderverse",
     repoHref: "https://github.com/lrlacerda/Spiderverse",
   },
-  {
-    title: "Assistente de LinkedIn com IA",
-    tech: ["JavaScript", "OpenAI", "Anthropic", "Azure AI"],
-    description:
-      "Extensão de navegador que analisa perfis do LinkedIn e sugere melhorias usando IA (OpenAI, Anthropic ou Azure AI Foundry).",
-    href: "https://github.com/lrlacerda/linkedin-ai-assistant",
-    repoHref: "https://github.com/lrlacerda/linkedin-ai-assistant",
-  },
-  {
-    title: "Gerenciador de Tarefas",
-    tech: ["React", "JavaScript"],
-    description:
-      "Aplicativo para organizar tarefas e compromissos do dia a dia, com formulários e validação em React.",
-    href: "https://react-web-formulario.vercel.app",
-    repoHref: "https://github.com/lrlacerda/React-Web-Formulario",
-  },
-  {
-    title: "CineSenai",
-    tech: ["React", "Vite"],
-    description:
-      "Sistema de catálogo e reservas de ingressos de cinema, front-end em React + Vite.",
-    href: "https://github.com/lrlacerda/CineSenai-Final",
-    repoHref: "https://github.com/lrlacerda/CineSenai-Final",
-  },
-  {
-    title: "PSN Store Clone",
-    tech: ["Angular", "TypeScript"],
-    description:
-      "Clone da loja PlayStation Store construído com Angular e TypeScript.",
-    href: "https://github.com/lrlacerda/angular-psn-store",
-    repoHref: "https://github.com/lrlacerda/angular-psn-store",
-  },
 ];
 
 const PROJECTS_PER_PAGE = 4;
@@ -90,7 +90,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import { Pagination, Mousewheel } from "swiper/modules";
 import { BsArrowRight } from "react-icons/bs";
 import { RiGithubFill, RiLockLine } from "react-icons/ri";
 
@@ -101,7 +101,10 @@ const WorkSlider = () => {
       pagination={{
         clickable: true,
       }}
-      modules={[Pagination]}
+      mousewheel={{
+        forceToAxis: true,
+      }}
+      modules={[Pagination, Mousewheel]}
       className="h-[420px] sm:h-[620px]"
     >
       {projectPages.map((page, pageIndex) => (
