@@ -32,6 +32,34 @@ export const blogPosts = [
     ],
   },
   {
+    slug: "ensinando-programacao-no-senai",
+    title: "O que aprendi ensinando programação para iniciantes no SENAI",
+    excerpt:
+      "Como instrutor técnico, lições sobre ensinar Full Stack, metodologias ágeis e IA generativa para quem está começando na área.",
+    date: "2026-07-20",
+    readTime: 5,
+    content: [
+      "[RASCUNHO — substituir por um artigo real] Ser Instrutor Técnico no SENAI me colocou de novo do outro lado da sala de aula — só que agora ensinando, não aprendendo. É uma experiência que muda a forma como eu mesmo entendo o que já sei.",
+      "Explicar front-end, back-end, banco de dados e metodologias ágeis para quem está começando do zero exige simplificar sem perder a precisão técnica — um exercício que também melhorou minha própria comunicação em reuniões técnicas.",
+      "Uma das partes mais interessantes tem sido incorporar IA generativa nas aulas: mostrar aos alunos como ferramentas de IA aceleram o aprendizado sem substituir o entendimento dos fundamentos.",
+      "Pretendo detalhar aqui, em posts futuros, como estruturo aulas práticas e como conecto teoria a projetos reais que simulam demandas de mercado.",
+    ],
+  },
+  {
+    slug: "migrando-portfolio-next-16",
+    title: "Bastidores: migrando meu próprio portfólio de Next.js 13 para 16",
+    excerpt:
+      "Como troquei um servidor Express/Nodemailer por uma API route com Resend, e o que quebrou (e corrigi) no upgrade major do Next.js.",
+    date: "2026-09-13",
+    readTime: 6,
+    content: [
+      "[RASCUNHO — substituir por um artigo real] Este próprio site passou por uma reforma grande recentemente: saiu um servidor Express separado para envio de e-mail, entrou uma API route do Next.js usando Resend — mais simples e compatível com deploy serverless na Vercel.",
+      "Também atualizei o projeto de Next.js 13 para a versão 16, o que trouxe mudanças reais: a fonte `@next/font` virou nativa (`next/font`), a flag `--no-lint` do build sumiu, e os módulos do Swiper passaram a vir de um caminho diferente (`swiper/modules`).",
+      "O upgrade também expôs um bug antigo — um carrossel de depoimentos que nunca recebia os módulos de navegação corretamente, porque a prop estava configurada como objeto em vez de lista.",
+      "A lição principal: builds locais podem falhar por motivos que nada têm a ver com o código (no meu caso, rodar o projeto dentro de uma pasta sincronizada pelo OneDrive causava timeouts) — vale sempre isolar a causa antes de sair mudando código.",
+    ],
+  },
+  {
     slug: "exemplo-primeiro-artigo",
     title: "Título de exemplo: substitua por um artigo real",
     excerpt:

@@ -31,7 +31,7 @@ const Blog = () => {
           Artigos <span className="text-accent">.</span>
         </motion.h2>
 
-        <div className="flex flex-col gap-y-6 max-w-[700px] mx-auto w-full">
+        <div className="flex flex-col gap-y-6 max-w-[700px] mx-auto w-full max-h-[45vh] xl:max-h-[50vh] overflow-y-auto hide-scrollbar pr-1">
           {blogPosts.map((post, index) => (
             <motion.div
               key={post.slug}
