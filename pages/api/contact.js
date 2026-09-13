@@ -1,4 +1,5 @@
 import { Resend } from "resend";
+import { checkRateLimit } from "../../lib/rateLimit";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const MAX_LENGTHS = { nome: 100, email: 200, assunto: 150, mensagem: 5000 };
@@ -11,6 +12,12 @@ export default async function handler(req, res) {
   if (req.method !== "POST") {
     res.setHeader("Allow", ["POST"]);
     return res.status(405).json({ error: "Método não permitido" });
+  }
+
+  const rateLimit = checkRateLimit(req);
+  if (!rateLimit.allowed) {
+    res.setHeader("Retry-After", String(rateLimit.retryAfterSeconds));
+    return res.status(429).json({ error: "Muitas requisições. Tente novamente mais tarde." });
   }
 
   const { nome, email, assunto, mensagem, website } = req.body ?? {};
