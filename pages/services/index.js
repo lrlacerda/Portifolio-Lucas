@@ -34,7 +34,7 @@ const Services = () => {
               animate="show"
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0">
-              Transformo ideias em soluções digitais impactantes, com desenvolvimento Full Stack (React, Node.js, C#/.NET), IA Aplicada (agentes, RAG, MCP) e mentoria técnica. Como Instrutor SENAI e desenvolvedor pleno, trago uma experiência diversificada que une código, educação técnica e otimização de processos.
+              Combino desenvolvimento Full Stack (React, Node.js, C#/.NET) com IA Aplicada (agentes, RAG, MCP) e mentoria técnica. Como Instrutor SENAI e desenvolvedor pleno, uno código, educação técnica e otimização de processos no dia a dia — não só telas bonitas, sistemas que resolvem problema real.
             </motion.p>
           </div>
           {/* slider */}

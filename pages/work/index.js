@@ -34,7 +34,7 @@ const Work = () => {
               animate="show"
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0">
-              Explore meu portfólio de projetos como desenvolvedor, onde cada linha de código conta uma história visual. De websites responsivos e experiências interativas a soluções robustas de back-end, cada projeto reflete meu compromisso em unir estética e funcionalidade. Utilizando tecnologias como React, Node.js, C#, e bancos de dados, trabalho para criar aplicações que não apenas encantam visualmente, mas também oferecem uma experiência de usuário fluida e eficaz no universo digital.
+              Alguns desses projetos estão em produção real (como o e-commerce completo e a plataforma de gestão de competências), outros foram meu campo de testes pra aprender React, Angular, C# e IA aplicada na prática. Onde o código é público, o link está no card. Onde não é, me chama pra conversar sobre a arquitetura.
             </motion.p>
           </div>
           {/* slider */}
