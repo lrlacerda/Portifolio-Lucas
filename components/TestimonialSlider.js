@@ -17,7 +17,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { Navigation, Pagination } from "swiper";
+import { Navigation, Pagination } from "swiper/modules";
 
 // icon
 import { FaQuoteLeft } from "react-icons/fa";
@@ -29,7 +29,7 @@ const TestimonialSlider = () => {
       pagination={{
         clickable: true,
       }}
-      modules={{ Navigation, Pagination }}
+      modules={[Navigation, Pagination]}
       className="h-[400px]"
     >
       {testimonialSlider.map((person, index) => {

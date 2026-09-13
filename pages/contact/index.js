@@ -1,5 +1,5 @@
 // components
-import Circles from "/components/Circles";
+import Circles from "../../components/Circles";
 import Head from "next/head";
 
 // icons
