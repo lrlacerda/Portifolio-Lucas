@@ -3,6 +3,20 @@ const workSlider = {
     {
       images: [
         {
+          title: "Plataforma de Gestão de Competências",
+          private: true,
+          tech: [".NET 8", "React 19"],
+          description:
+            "Projeto pessoal em desenvolvimento: plataforma para gestão de competências profissionais, com back-end em .NET 8 e front-end em React 19.",
+        },
+        {
+          title: "E-commerce Completo",
+          private: true,
+          tech: ["React", "C#"],
+          description:
+            "E-commerce completo já em produção, do catálogo ao checkout, construído com React no front-end e C# no back-end.",
+        },
+        {
           title: "Hospedagens",
           path: "/Hospedagens.com.png",
           href: "https://lrlacerda.github.io/Hospedagens.com/",
@@ -38,13 +52,14 @@ const workSlider = {
 };
 
 import Image from "next/image";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { BsArrowRight } from "react-icons/bs";
-import { RiGithubFill } from "react-icons/ri";
+import { RiGithubFill, RiLockLine } from "react-icons/ri";
 
 const WorkSlider = () => {
   return (
@@ -61,6 +76,24 @@ const WorkSlider = () => {
           <div className="grid grid-cols-2 gap-4 cursor-pointer mt-[60px]">
             {slide.images.map((image, imageIndex) => (
               <div className="relative rounded-lg overflow-hidden flex items-center justify-center group" key={imageIndex}>
+                {image.private ? (
+                  <div className="w-full h-full min-h-[150px] bg-gradient-to-br from-[#2B2154] to-[#4a22bd] rounded-lg flex flex-col justify-center gap-y-2 p-4 text-left">
+                    <div className="flex items-center gap-x-2 text-white/50 text-[11px] uppercase tracking-widest">
+                      <RiLockLine /> Código privado
+                    </div>
+                    <div className="text-base font-medium leading-tight">{image.title}</div>
+                    <div className="text-[13px] text-white/60 leading-snug">{image.description}</div>
+                    <div className="flex flex-wrap gap-1.5 mt-1">
+                      {image.tech.map((t) => (
+                        <span key={t} className="text-[11px] bg-white/10 rounded px-2 py-0.5">{t}</span>
+                      ))}
+                    </div>
+                    <Link href="/contact" className="text-accent text-[13px] mt-1 hover:underline">
+                      Quer saber mais? Fale comigo →
+                    </Link>
+                  </div>
+                ) : (
+                  <>
                 {image.repoHref && (
                   <a
                     href={image.repoHref}
@@ -101,6 +134,8 @@ const WorkSlider = () => {
                     </div>
                   </div>
                 </div>
+                  </>
+                )}
               </div>
             ))}
           </div>
