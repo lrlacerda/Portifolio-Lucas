@@ -1,87 +1,88 @@
-const workSlider = {
-  slides: [
-    {
-      images: [
-        {
-          title: "Plataforma de Gestão de Competências",
-          private: true,
-          tech: [".NET 8", "React 19"],
-          description:
-            "Projeto pessoal em desenvolvimento: plataforma para gestão de competências profissionais, com back-end em .NET 8 e front-end em React 19.",
-        },
-        {
-          title: "E-commerce Completo",
-          private: true,
-          tech: ["React", "C#"],
-          description:
-            "E-commerce completo já em produção, do catálogo ao checkout, construído com React no front-end e C# no back-end.",
-        },
-        {
-          title: "Hospedagens",
-          path: "/Hospedagens.com.png",
-          href: "https://lrlacerda.github.io/Hospedagens.com/",
-          repoHref: "https://github.com/lrlacerda/Hospedagens.com",
-        },
-        {
-          title: "Compras Eletrônicos",
-          path: "/ComprasEletronicos.png",
-          href: "https://lrlacerda.github.io/Vendas_Eletronicos/",
-          repoHref: "https://github.com/lrlacerda/Vendas_Eletronicos",
-        },
-        {
-          title: "HBO",
-          path: "/HBO.png",
-          href: "https://lrlacerda.github.io/HBOmax/",
-          repoHref: "https://github.com/lrlacerda/HBOmax",
-        },
-        {
-          title: "Mundo Invertido",
-          path: "/MundoInvertido.png",
-          href: "https://lrlacerda.github.io/Mundo-invertido/",
-          repoHref: "https://github.com/lrlacerda/Mundo-invertido",
-        },
-        {
-          title: "spider",
-          path: "/spider.png",
-          href: "https://github.com/lrlacerda/Spiderverse",
-          repoHref: "https://github.com/lrlacerda/Spiderverse",
-        },
-        {
-          title: "Assistente de LinkedIn com IA",
-          tech: ["JavaScript", "OpenAI", "Anthropic", "Azure AI"],
-          description:
-            "Extensão de navegador que analisa perfis do LinkedIn e sugere melhorias usando IA (OpenAI, Anthropic ou Azure AI Foundry).",
-          href: "https://github.com/lrlacerda/linkedin-ai-assistant",
-          repoHref: "https://github.com/lrlacerda/linkedin-ai-assistant",
-        },
-        {
-          title: "Gerenciador de Tarefas",
-          tech: ["React", "JavaScript"],
-          description:
-            "Aplicativo para organizar tarefas e compromissos do dia a dia, com formulários e validação em React.",
-          href: "https://react-web-formulario.vercel.app",
-          repoHref: "https://github.com/lrlacerda/React-Web-Formulario",
-        },
-        {
-          title: "CineSenai",
-          tech: ["React", "Vite"],
-          description:
-            "Sistema de catálogo e reservas de ingressos de cinema, front-end em React + Vite.",
-          href: "https://github.com/lrlacerda/CineSenai-Final",
-          repoHref: "https://github.com/lrlacerda/CineSenai-Final",
-        },
-        {
-          title: "PSN Store Clone",
-          tech: ["Angular", "TypeScript"],
-          description:
-            "Clone da loja PlayStation Store construído com Angular e TypeScript.",
-          href: "https://github.com/lrlacerda/angular-psn-store",
-          repoHref: "https://github.com/lrlacerda/angular-psn-store",
-        },
-      ],
-    },
-  ],
-};
+// lista plana de projetos — agrupada em páginas de 4 no componente abaixo
+const projects = [
+  {
+    title: "Plataforma de Gestão de Competências",
+    private: true,
+    tech: [".NET 8", "React 19"],
+    description:
+      "Projeto pessoal em desenvolvimento: plataforma para gestão de competências profissionais, com back-end em .NET 8 e front-end em React 19.",
+  },
+  {
+    title: "E-commerce Completo",
+    private: true,
+    tech: ["React", "C#"],
+    description:
+      "E-commerce completo já em produção, do catálogo ao checkout, construído com React no front-end e C# no back-end.",
+  },
+  {
+    title: "Hospedagens",
+    path: "/Hospedagens.com.png",
+    href: "https://lrlacerda.github.io/Hospedagens.com/",
+    repoHref: "https://github.com/lrlacerda/Hospedagens.com",
+  },
+  {
+    title: "Compras Eletrônicos",
+    path: "/ComprasEletronicos.png",
+    href: "https://lrlacerda.github.io/Vendas_Eletronicos/",
+    repoHref: "https://github.com/lrlacerda/Vendas_Eletronicos",
+  },
+  {
+    title: "HBO",
+    path: "/HBO.png",
+    href: "https://lrlacerda.github.io/HBOmax/",
+    repoHref: "https://github.com/lrlacerda/HBOmax",
+  },
+  {
+    title: "Mundo Invertido",
+    path: "/MundoInvertido.png",
+    href: "https://lrlacerda.github.io/Mundo-invertido/",
+    repoHref: "https://github.com/lrlacerda/Mundo-invertido",
+  },
+  {
+    title: "spider",
+    path: "/spider.png",
+    href: "https://github.com/lrlacerda/Spiderverse",
+    repoHref: "https://github.com/lrlacerda/Spiderverse",
+  },
+  {
+    title: "Assistente de LinkedIn com IA",
+    tech: ["JavaScript", "OpenAI", "Anthropic", "Azure AI"],
+    description:
+      "Extensão de navegador que analisa perfis do LinkedIn e sugere melhorias usando IA (OpenAI, Anthropic ou Azure AI Foundry).",
+    href: "https://github.com/lrlacerda/linkedin-ai-assistant",
+    repoHref: "https://github.com/lrlacerda/linkedin-ai-assistant",
+  },
+  {
+    title: "Gerenciador de Tarefas",
+    tech: ["React", "JavaScript"],
+    description:
+      "Aplicativo para organizar tarefas e compromissos do dia a dia, com formulários e validação em React.",
+    href: "https://react-web-formulario.vercel.app",
+    repoHref: "https://github.com/lrlacerda/React-Web-Formulario",
+  },
+  {
+    title: "CineSenai",
+    tech: ["React", "Vite"],
+    description:
+      "Sistema de catálogo e reservas de ingressos de cinema, front-end em React + Vite.",
+    href: "https://github.com/lrlacerda/CineSenai-Final",
+    repoHref: "https://github.com/lrlacerda/CineSenai-Final",
+  },
+  {
+    title: "PSN Store Clone",
+    tech: ["Angular", "TypeScript"],
+    description:
+      "Clone da loja PlayStation Store construído com Angular e TypeScript.",
+    href: "https://github.com/lrlacerda/angular-psn-store",
+    repoHref: "https://github.com/lrlacerda/angular-psn-store",
+  },
+];
+
+const PROJECTS_PER_PAGE = 4;
+const projectPages = [];
+for (let i = 0; i < projects.length; i += PROJECTS_PER_PAGE) {
+  projectPages.push(projects.slice(i, i + PROJECTS_PER_PAGE));
+}
 
 import Image from "next/image";
 import Link from "next/link";
@@ -101,12 +102,12 @@ const WorkSlider = () => {
         clickable: true,
       }}
       modules={[Pagination]}
-      className="h-[720px] sm:h-[980px]"
+      className="h-[420px] sm:h-[620px]"
     >
-      {workSlider.slides.map((slide, slideIndex) => (
-        <SwiperSlide key={slideIndex}>
-          <div className="grid grid-cols-2 gap-4 cursor-pointer mt-[60px]">
-            {slide.images.map((image, imageIndex) => (
+      {projectPages.map((page, pageIndex) => (
+        <SwiperSlide key={pageIndex}>
+          <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer mt-[60px]">
+            {page.map((image, imageIndex) => (
               <div className="relative rounded-lg overflow-hidden flex items-center justify-center group" key={imageIndex}>
                 {image.repoHref && (
                   <a
