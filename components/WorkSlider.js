@@ -17,6 +17,13 @@ const projects = [
     caseStudySlug: "decisoes-de-arquitetura-projetos-privados",
   },
   {
+    title: "Rotina a Dois",
+    private: true,
+    tech: ["Next.js"],
+    description:
+      "Aplicativo pessoal para organizar rotina e tarefas compartilhadas entre duas pessoas, com autenticação de usuários.",
+  },
+  {
     title: "Assistente de LinkedIn com IA",
     tech: ["JavaScript", "OpenAI", "Anthropic", "Azure AI"],
     description:
