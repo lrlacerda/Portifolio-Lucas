@@ -1,5 +1,4 @@
-// RASCUNHO — conteúdo de exemplo escrito para visualizar o layout.
-// Troque pelos seus artigos reais antes de divulgar o link publicamente.
+// Artigos do blog. Revise o tom/detalhes antes de publicar nas redes.
 // Cada post precisa de: slug (único, usado na URL), title, excerpt,
 // date (YYYY-MM-DD), readTime (minutos) e content (array de parágrafos).
 export const blogPosts = [
@@ -37,43 +36,34 @@ export const blogPosts = [
   },
   {
     slug: "ensinando-programacao-no-senai",
-    title: "O que aprendi ensinando programação para iniciantes no SENAI",
+    title: "O que aprendi ensinando programação para quem está começando do zero",
     excerpt:
-      "Como instrutor técnico, lições sobre ensinar Full Stack, metodologias ágeis e IA generativa para quem está começando na área.",
+      "Como Instrutor Técnico no SENAI, formando desenvolvedores Full Stack — e o que isso me ensinou sobre comunicar tecnologia de forma simples sem perder profundidade.",
     date: "2026-07-20",
     readTime: 5,
     content: [
-      "[RASCUNHO — substituir por um artigo real] Ser Instrutor Técnico no SENAI me colocou de novo do outro lado da sala de aula — só que agora ensinando, não aprendendo. É uma experiência que muda a forma como eu mesmo entendo o que já sei.",
-      "Explicar front-end, back-end, banco de dados e metodologias ágeis para quem está começando do zero exige simplificar sem perder a precisão técnica — um exercício que também melhorou minha própria comunicação em reuniões técnicas.",
-      "Uma das partes mais interessantes tem sido incorporar IA generativa nas aulas: mostrar aos alunos como ferramentas de IA aceleram o aprendizado sem substituir o entendimento dos fundamentos.",
-      "Pretendo detalhar aqui, em posts futuros, como estruturo aulas práticas e como conecto teoria a projetos reais que simulam demandas de mercado.",
+      "Ser Instrutor Técnico na Escola SENAI de Informática me colocou de volta na sala de aula — só que agora do outro lado. E foi ensinando que percebi o quanto eu ainda tinha a aprender sobre o que já sabia.",
+      "Formo alunos em desenvolvimento Full Stack: front-end com HTML, CSS, JavaScript e React, back-end conectando as duas pontas em projetos que simulam demandas reais de mercado. Também preparo turmas para certificações Microsoft e conduzo conteúdo de desenvolvimento mobile, do design de interface à publicação do aplicativo.",
+      "A parte mais desafiadora não é o conteúdo técnico — é simplificar sem infantilizar. Explicar por que uma API REST funciona daquele jeito, ou por que uma arquitetura de dados importa, para alguém que nunca escreveu uma linha de código, exige um nível de clareza que eu não tinha quando só programava para mim mesmo. Isso melhorou diretamente minha comunicação em reuniões técnicas com áreas não-técnicas.",
+      "Também ensino levantamento de requisitos, briefing e prototipação em Figma, conectando a etapa de design à implementação — e aplico Scrum e Kanban na condução das turmas, pra aproximar os alunos da rotina real de um time de desenvolvimento antes mesmo do primeiro emprego.",
+      "Uma das partes que mais gosto hoje é incorporar IA generativa nas aulas: mostrar que usar IA bem não substitui entender os fundamentos — pelo contrário, quem entende a base usa a IA com muito mais critério e menos risco de aceitar respostas erradas sem perceber.",
+      "Migrei de carreira uma vez, então reconheço de perto o que meus alunos estão vivendo: a insegurança de recomeçar, o medo de estar velho demais ou atrasado demais para a área. Uso essa experiência todos os dias em sala. Se você está pensando em migrar pra tecnologia, o conselho mais honesto que posso dar é: comece, mesmo com medo. O domínio vem depois, na prática.",
     ],
   },
   {
     slug: "migrando-portfolio-next-16",
-    title: "Bastidores: migrando meu próprio portfólio de Next.js 13 para 16",
+    title: "Bastidores reais: os bugs que encontrei ao modernizar meu próprio portfólio",
     excerpt:
-      "Como troquei um servidor Express/Nodemailer por uma API route com Resend, e o que quebrou (e corrigi) no upgrade major do Next.js.",
+      "Migrei de um servidor Express/Nodemailer com senha exposta para uma API serverless com Resend, e fiz o upgrade major do Next.js 13 para 16. Veja os problemas reais que apareceram no caminho.",
     date: "2026-09-13",
     readTime: 6,
     content: [
-      "[RASCUNHO — substituir por um artigo real] Este próprio site passou por uma reforma grande recentemente: saiu um servidor Express separado para envio de e-mail, entrou uma API route do Next.js usando Resend — mais simples e compatível com deploy serverless na Vercel.",
-      "Também atualizei o projeto de Next.js 13 para a versão 16, o que trouxe mudanças reais: a fonte `@next/font` virou nativa (`next/font`), a flag `--no-lint` do build sumiu, e os módulos do Swiper passaram a vir de um caminho diferente (`swiper/modules`).",
-      "O upgrade também expôs um bug antigo — um carrossel de depoimentos que nunca recebia os módulos de navegação corretamente, porque a prop estava configurada como objeto em vez de lista.",
-      "A lição principal: builds locais podem falhar por motivos que nada têm a ver com o código (no meu caso, rodar o projeto dentro de uma pasta sincronizada pelo OneDrive causava timeouts) — vale sempre isolar a causa antes de sair mudando código.",
-    ],
-  },
-  {
-    slug: "exemplo-primeiro-artigo",
-    title: "Título de exemplo: substitua por um artigo real",
-    excerpt:
-      "Este é um post de exemplo para mostrar o layout da seção de Artigos. Edite ou remova em data/blogPosts.js.",
-    date: "2026-09-13",
-    readTime: 4,
-    content: [
-      "Este é um artigo de exemplo. A estrutura da página já está pronta: lista em /blog e página individual em /blog/[slug].",
-      "Para publicar conteúdo real, edite o arquivo data/blogPosts.js e adicione um objeto para cada artigo, com slug, título, resumo, data e o conteúdo em parágrafos.",
-      "Boas ideias de artigos para reforçar seu posicionamento: bastidores de como você usa agentes de IA e RAG no dia a dia, lições da transição de carreira (Medicina Veterinária → Tecnologia), ou um tutorial curto de algo que você ensina no SENAI.",
+      "Todo desenvolvedor tem aquele projeto pessoal que fica velho enquanto você olha para o lado — o meu era meu próprio portfólio. Ao revisar tudo, encontrei problemas que eu mesmo não esperava, e resolvi documentar o processo aqui, porque os bugs mais instrutivos raramente são os óbvios.",
+      "O formulário de contato dependia de um servidor Express separado, com Nodemailer e uma senha de conta de e-mail salva em texto puro num `.env` local — nunca chegou a vazar no Git, mas era um risco real, e de todo jeito não funcionaria numa hospedagem serverless como a Vercel. Troquei tudo por uma API route do Next.js usando Resend, com validação de campos no servidor e um campo honeypot contra spam.",
+      "O bug mais sério só apareceu durante o teste: com a chave da Resend ainda não configurada, a API devolvia erro 500 para *qualquer* requisição — inclusive as inválidas — porque o cliente da Resend era instanciado no escopo do módulo, antes mesmo da validação rodar. Só descobri simulando ataques básicos no próprio endpoint (e-mail inválido, campo vazio, payload gigante) depois de publicar.",
+      "Fiz também o upgrade major do Next.js (13 → 16) e do Swiper (9 → 14), o que zerou uma lista de vulnerabilidades conhecidas nas dependências — mas trouxe mudanças reais de API: a fonte `@next/font` virou nativa (`next/font`), a flag `--no-lint` do build foi removida, e os módulos do Swiper passaram a vir de `swiper/modules` em vez de `swiper`. O upgrade também expôs um bug antigo, que já existia antes da migração: o carrossel de depoimentos nunca recebia corretamente os módulos de navegação, porque a prop `modules` estava configurada como objeto em vez de lista — provavelmente nunca funcionou direito.",
+      "A lição que mais valeu a pena, porém, não foi sobre código: builds que falham intermitentemente podem não ter nada a ver com o que você escreveu. No meu caso, rodar o projeto dentro de uma pasta sincronizada pelo OneDrive causava timeouts aleatórios no build, porque o macOS intermedia todo acesso a arquivo nesse tipo de pasta. Mover o projeto para uma pasta local comum resolveu na hora.",
+      "Ferramenta boa não é a que nunca erra, é a que te ajuda a achar o erro rápido. Testar o próprio endpoint como se fosse um atacante, antes de assumir que 'funcionou', é hoje parte do meu checklist antes de qualquer deploy.",
     ],
   },
 ];
