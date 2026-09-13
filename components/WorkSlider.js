@@ -46,6 +46,38 @@ const workSlider = {
           href: "https://github.com/lrlacerda/Spiderverse",
           repoHref: "https://github.com/lrlacerda/Spiderverse",
         },
+        {
+          title: "Assistente de LinkedIn com IA",
+          tech: ["JavaScript", "OpenAI", "Anthropic", "Azure AI"],
+          description:
+            "Extensão de navegador que analisa perfis do LinkedIn e sugere melhorias usando IA (OpenAI, Anthropic ou Azure AI Foundry).",
+          href: "https://github.com/lrlacerda/linkedin-ai-assistant",
+          repoHref: "https://github.com/lrlacerda/linkedin-ai-assistant",
+        },
+        {
+          title: "Gerenciador de Tarefas",
+          tech: ["React", "JavaScript"],
+          description:
+            "Aplicativo para organizar tarefas e compromissos do dia a dia, com formulários e validação em React.",
+          href: "https://react-web-formulario.vercel.app",
+          repoHref: "https://github.com/lrlacerda/React-Web-Formulario",
+        },
+        {
+          title: "CineSenai",
+          tech: ["React", "Vite"],
+          description:
+            "Sistema de catálogo e reservas de ingressos de cinema, front-end em React + Vite.",
+          href: "https://github.com/lrlacerda/CineSenai-Final",
+          repoHref: "https://github.com/lrlacerda/CineSenai-Final",
+        },
+        {
+          title: "PSN Store Clone",
+          tech: ["Angular", "TypeScript"],
+          description:
+            "Clone da loja PlayStation Store construído com Angular e TypeScript.",
+          href: "https://github.com/lrlacerda/angular-psn-store",
+          repoHref: "https://github.com/lrlacerda/angular-psn-store",
+        },
       ],
     },
   ],
@@ -69,31 +101,13 @@ const WorkSlider = () => {
         clickable: true,
       }}
       modules={[Pagination]}
-      className="h-[420px] sm:h-[620px]"
+      className="h-[720px] sm:h-[980px]"
     >
       {workSlider.slides.map((slide, slideIndex) => (
         <SwiperSlide key={slideIndex}>
           <div className="grid grid-cols-2 gap-4 cursor-pointer mt-[60px]">
             {slide.images.map((image, imageIndex) => (
               <div className="relative rounded-lg overflow-hidden flex items-center justify-center group" key={imageIndex}>
-                {image.private ? (
-                  <div className="w-full h-full min-h-[150px] bg-gradient-to-br from-[#2B2154] to-[#4a22bd] rounded-lg flex flex-col justify-center gap-y-2 p-4 text-left">
-                    <div className="flex items-center gap-x-2 text-white/50 text-[11px] uppercase tracking-widest">
-                      <RiLockLine /> Código privado
-                    </div>
-                    <div className="text-base font-medium leading-tight">{image.title}</div>
-                    <div className="text-[13px] text-white/60 leading-snug">{image.description}</div>
-                    <div className="flex flex-wrap gap-1.5 mt-1">
-                      {image.tech.map((t) => (
-                        <span key={t} className="text-[11px] bg-white/10 rounded px-2 py-0.5">{t}</span>
-                      ))}
-                    </div>
-                    <Link href="/contact" className="text-accent text-[13px] mt-1 hover:underline">
-                      Quer saber mais? Fale comigo →
-                    </Link>
-                  </div>
-                ) : (
-                  <>
                 {image.repoHref && (
                   <a
                     href={image.repoHref}
@@ -107,6 +121,47 @@ const WorkSlider = () => {
                     <RiGithubFill />
                   </a>
                 )}
+                {!image.path ? (
+                  <div
+                    className={`w-full h-full min-h-[150px] bg-gradient-to-br from-[#2B2154] to-[#4a22bd] rounded-lg flex flex-col justify-center gap-y-2 p-4 text-left ${!image.private ? "cursor-pointer" : ""}`}
+                    role={!image.private ? "button" : undefined}
+                    tabIndex={!image.private ? 0 : undefined}
+                    aria-label={!image.private ? `Ver projeto: ${image.title}` : undefined}
+                    onClick={!image.private ? () => window.open(image.href || "#", "_blank", "noopener,noreferrer") : undefined}
+                    onKeyDown={
+                      !image.private
+                        ? (e) => {
+                            if (e.key === "Enter" || e.key === " ") {
+                              e.preventDefault();
+                              window.open(image.href || "#", "_blank", "noopener,noreferrer");
+                            }
+                          }
+                        : undefined
+                    }
+                  >
+                    {image.private && (
+                      <div className="flex items-center gap-x-2 text-white/50 text-[11px] uppercase tracking-widest">
+                        <RiLockLine /> Código privado
+                      </div>
+                    )}
+                    <div className="text-base font-medium leading-tight">{image.title}</div>
+                    <div className="text-[13px] text-white/60 leading-snug">{image.description}</div>
+                    <div className="flex flex-wrap gap-1.5 mt-1">
+                      {image.tech.map((t) => (
+                        <span key={t} className="text-[11px] bg-white/10 rounded px-2 py-0.5">{t}</span>
+                      ))}
+                    </div>
+                    {image.private && (
+                      <Link
+                        href="/contact"
+                        onClick={(e) => e.stopPropagation()}
+                        className="text-accent text-[13px] mt-1 hover:underline"
+                      >
+                        Quer saber mais? Fale comigo →
+                      </Link>
+                    )}
+                  </div>
+                ) : (
                 <div
                   className="flex items-center justify-center relative overflow-hidden group cursor-pointer"
                   role="button"
@@ -134,7 +189,6 @@ const WorkSlider = () => {
                     </div>
                   </div>
                 </div>
-                  </>
                 )}
               </div>
             ))}
