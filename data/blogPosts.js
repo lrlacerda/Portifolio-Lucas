@@ -66,4 +66,19 @@ export const blogPosts = [
       "Ferramenta boa não é a que nunca erra, é a que te ajuda a achar o erro rápido. Testar o próprio endpoint como se fosse um atacante, antes de assumir que 'funcionou', é hoje parte do meu checklist antes de qualquer deploy.",
     ],
   },
+  {
+    slug: "decisoes-de-arquitetura-projetos-privados",
+    title: "Decisões de arquitetura de 2 projetos que não posso abrir o código",
+    excerpt:
+      "Uma plataforma de gestão de competências (.NET 8 + React 19) e um e-commerce completo (React + C#) que mantenho em repositórios privados. Sem mostrar código, dá pra falar sobre as decisões por trás deles.",
+    date: "2026-09-10",
+    readTime: 5,
+    content: [
+      "Nem todo projeto que vale a pena mostrar pode ter o código aberto. Mantenho dois projetos pessoais em repositórios privados — uma plataforma de gestão de competências profissionais e um e-commerce completo — e, mesmo sem expor uma linha de código, dá pra contar as decisões de arquitetura por trás deles, que é o que normalmente mais interessa em entrevista técnica.",
+      "Na plataforma de gestão de competências, escolhi .NET 8 no back-end e React 19 no front-end de propósito: .NET 8 traz minimal APIs e performance nativa sem o peso de configuração de versões anteriores, e React 19 já assume Server Components e Actions como padrão — então desde o início desenhei o fluxo de dados pensando em menos estado espalhado no cliente e mais lógica resolvida perto da fonte de dados. A decisão mais difícil não foi de tecnologia, foi de modelagem: como representar 'competência' de um jeito flexível o suficiente pra crescer (novas categorias, novos níveis de proficiência) sem virar um sistema genérico demais para manter.",
+      "No e-commerce, o desafio central não foi o catálogo ou o carrinho — foi o checkout. Pagamento é a parte do sistema onde erro custa dinheiro real e confiança do cliente, então tratei o fluxo de pagamento como uma máquina de estados explícita (pedido criado → pagamento pendente → confirmado/recusado → processado), em vez de deixar o estado implícito espalhado em flags soltas. Isso facilita muito debugar 'por que esse pedido ficou travado' meses depois, sem precisar reconstruir o raciocínio do zero.",
+      "Em comum entre os dois: tratei autenticação e autorização como responsabilidade do back-end, nunca confiando em validação feita só no front-end — o front pode (e deve) dar feedback rápido pro usuário, mas toda decisão que importa é revalidada no servidor. É um princípio simples, mas é exatamente o tipo de detalhe que separa um projeto de portfólio de um sistema que aguentaria produção de verdade.",
+      "Gosto de pensar nesses dois projetos como minha 'bancada de testes' pessoal — onde posso errar, refatorar e tentar de novo sem o risco de quebrar algo em produção de um cliente. Se você é recrutador ou dev técnico e quer entender melhor essas decisões (ou ver uma demonstração ao vivo, sem expor o repositório), me chama — converso com prazer sobre qualquer uma delas.",
+    ],
+  },
 ];

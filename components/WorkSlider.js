@@ -6,6 +6,7 @@ const projects = [
     tech: [".NET 8", "React 19"],
     description:
       "Projeto pessoal em desenvolvimento: plataforma para gestão de competências profissionais, com back-end em .NET 8 e front-end em React 19.",
+    caseStudySlug: "decisoes-de-arquitetura-projetos-privados",
   },
   {
     title: "E-commerce Completo",
@@ -13,6 +14,7 @@ const projects = [
     tech: ["React", "C#"],
     description:
       "E-commerce completo já em produção, do catálogo ao checkout, construído com React no front-end e C# no back-end.",
+    caseStudySlug: "decisoes-de-arquitetura-projetos-privados",
   },
   {
     title: "Assistente de LinkedIn com IA",
@@ -156,18 +158,29 @@ const WorkSlider = () => {
                       ))}
                     </div>
                     {image.private && (
-                      <Link
-                        href="/contact"
-                        onClick={(e) => e.stopPropagation()}
-                        className="text-accent text-[13px] mt-1 hover:underline"
-                      >
-                        Quer saber mais? Fale comigo →
-                      </Link>
+                      <div className="flex flex-col gap-y-0.5 mt-1">
+                        {image.caseStudySlug && (
+                          <Link
+                            href={`/blog/${image.caseStudySlug}`}
+                            onClick={(e) => e.stopPropagation()}
+                            className="text-accent text-[13px] hover:underline"
+                          >
+                            Ler estudo de caso →
+                          </Link>
+                        )}
+                        <Link
+                          href="/contact"
+                          onClick={(e) => e.stopPropagation()}
+                          className="text-white/60 text-[13px] hover:underline"
+                        >
+                          Quer saber mais? Fale comigo →
+                        </Link>
+                      </div>
                     )}
                   </div>
                 ) : (
                 <div
-                  className="flex items-center justify-center relative overflow-hidden group cursor-pointer"
+                  className="w-full h-full flex items-center justify-center relative overflow-hidden group cursor-pointer"
                   role="button"
                   tabIndex={0}
                   aria-label={`Ver projeto: ${image.title}`}
@@ -179,7 +192,7 @@ const WorkSlider = () => {
                     }
                   }}
                 >
-                  <Image src={image.path} width={500} height={300} alt={image.title} />
+                  <Image src={image.path} fill sizes="(max-width: 640px) 50vw, 300px" className="object-cover" alt={image.title} />
                   <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
                   <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 transition-all duration-300">
                     <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">

@@ -34,7 +34,12 @@ function MyApp({ Component, pageProps }) {
           content="Portfólio de Lucas Lacerda, Desenvolvedor Full Stack Pleno e Instrutor Técnico SENAI, especializado em IA Aplicada: agentes, RAG e MCP."
         />
         <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary" />
+        <meta property="og:image" content="https://portifolio-lucas-leqy.vercel.app/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Lucas Ribeiro de Lacerda — Desenvolvedor Full Stack & AI-Native Engineer" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://portifolio-lucas-leqy.vercel.app/og-image.png" />
       </Head>
       <Layout>
         <AnimatePresence mode='wait'>
