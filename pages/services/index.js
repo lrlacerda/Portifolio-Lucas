@@ -34,7 +34,7 @@ const Services = () => {
               animate="show"
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0">
-              Transformo ideias em soluções digitais impactantes, especializado em desenvolvimento Full Stack com foco em React, Node.js e tecnologias de nuvem. Com uma sólida formação em Análise e Desenvolvimento de Sistemas, trago uma experiência diversificada que abrange tanto o desenvolvimento de aplicações web quanto a otimização de processos empresariais.
+              Transformo ideias em soluções digitais impactantes, com desenvolvimento Full Stack (React, Node.js, C#/.NET), IA Aplicada (agentes, RAG, MCP) e mentoria técnica. Como Instrutor SENAI e desenvolvedor pleno, trago uma experiência diversificada que une código, educação técnica e otimização de processos.
             </motion.p>
           </div>
           {/* slider */}

@@ -11,31 +11,31 @@ import {
 const serviceData = [
   {
     icon: <RxDesktop />,
-    title: "Desenvolvedor Full Stack",
-    description: "Criando experiências digitais dinâmicas e funcionais.",
+    title: "Desenvolvimento Full Stack",
+    description: "Aplicações completas, do front-end ao back-end.",
     moreDescription:
-      "Sou especializado em desenvolvimento Full Stack, utilizando tecnologias modernas como React, Node.js e TypeScript para construir aplicações responsivas. Com foco na performance e usabilidade, ofereço soluções que atendem às necessidades dos clientes, integrando APIs e colaborando em equipes multidisciplinares.",
+      "Construo aplicações web completas com React, Next.js, Node.js, TypeScript e C#/.NET, integrando APIs REST, bancos de dados relacionais e não relacionais e serviços em nuvem. Foco em performance, boas práticas e código sustentável, do design da arquitetura à entrega.",
   },
   {
     icon: <RxCrop />,
-    title: "Desenvolvedor Front-End",
-    description: "Criação de Interfaces Dinâmicas e Responsivas.",
+    title: "Front-End & UI/UX",
+    description: "Interfaces modernas, responsivas e acessíveis.",
     moreDescription:
-      "Especializado no desenvolvimento de interfaces intuitivas e atraentes, utilizo tecnologias como React, CSS, e JavaScript para criar experiências de usuário fluidas e responsivas. Com foco em usabilidade e performance, desenvolvo layouts modernos que se adaptam a diferentes dispositivos, garantindo uma interação agradável e eficiente para os usuários finais.",
-  },
-  {
-    icon: <RxCode />,
-    title: "Desenvolvedor Web",
-    description: "Criação de Soluções Inovadoras e Eficientes.",
-    moreDescription:
-      "Com experiência em desenvolvimento Full Stack, foco em tecnologias modernas como React, Node.js e TypeScript. Comprometido em criar aplicações web dinâmicas e intuitivas, otimizando a experiência do usuário e implementando melhores práticas de desenvolvimento ágil.",
+      "Crio interfaces intuitivas e responsivas com React, Tailwind CSS e Framer Motion, com atenção a usabilidade, performance e consistência visual. Uso Figma para prototipação e para conectar a etapa de design à implementação técnica.",
   },
   {
     icon: <RxReader />,
-    title: "Arquitetura de Soluções",
-    description: "Planejamento e Estruturação de Sistemas Escaláveis.",
+    title: "IA Aplicada & Automação",
+    description: "Agentes de IA, RAG e integração com LLMs.",
     moreDescription:
-      "Trabalho com a arquitetura de soluções robustas e escaláveis, desde a concepção até a implementação. Tenho experiência em projetar sistemas que integram diversas tecnologias, como microsserviços, bancos de dados relacionais e não relacionais, e serviços em nuvem. Foco na eficiência e escalabilidade para garantir que as soluções atendam às demandas crescentes do mercado, sempre priorizando a segurança e a performance.",
+      "Aplico IA de ponta a ponta no desenvolvimento: arquitetura de agentes autônomos, RAG (Retrieval-Augmented Generation) e MCP (Model Context Protocol) para integrar LLMs em sistemas de produção, do design da arquitetura ao deploy.",
+  },
+  {
+    icon: <RxCode />,
+    title: "Mentoria e Capacitação Técnica",
+    description: "Formação de times e profissionais em tecnologia.",
+    moreDescription:
+      "Como Instrutor Técnico no SENAI, formo profissionais em desenvolvimento Full Stack, metodologias ágeis (Scrum/Kanban) e boas práticas de mercado — do levantamento de requisitos à entrega de projetos reais.",
   },
 ];
 

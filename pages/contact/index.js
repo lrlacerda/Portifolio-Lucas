@@ -21,6 +21,7 @@ const Contact = () => {
     email: '',
     assunto: '',
     mensagem: '',
+    website: '', // honeypot
   };
 
   const validationSchema = yup.object().shape({
@@ -129,6 +130,16 @@ const Contact = () => {
                       <span className="text-red-400 text-sm text-left">{errors.mensagem}</span>
                     )}
                   </div>
+                  {/* honeypot anti-spam: campo escondido, humanos não preenchem */}
+                  <input
+                    type="text"
+                    name="website"
+                    tabIndex="-1"
+                    autoComplete="off"
+                    aria-hidden="true"
+                    className="absolute -left-[9999px] w-0 h-0 opacity-0"
+                    onChange={handleChange}
+                  />
                   <button
                     type="submit"
                     disabled={isSubmitting}
