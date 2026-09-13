@@ -35,7 +35,7 @@ const Home = () => {
             animate="show"
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16">
-            Entusiasta de tecnologia com experiência em desenvolvimento web, especializado em criar interfaces modernas e intuitivas. Proficiente em JavaScript, TypeScript, C#, e SQL, com forte domínio em frameworks como React.js e Next.js, além de experiência em Node.js e REST APIs. Comprometido em desenvolver soluções elegantes e eficientes que não apenas atendem, mas superam as expectativas do usuário, melhorando significativamente a experiência digital.
+            Desenvolvedor Full Stack Pleno e Instrutor Técnico SENAI, especializado em React, Node.js, TypeScript e C#/.NET. Aplico IA de ponta a ponta no meu fluxo de trabalho — agentes autônomos, RAG e MCP — para criar soluções digitais completas, elegantes e eficientes, do front-end ao back-end.
           </motion.p>
           {/* btn */}
           <div className="flex justify-center xl:hidden relative">

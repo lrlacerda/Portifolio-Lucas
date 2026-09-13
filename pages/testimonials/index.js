@@ -1,5 +1,6 @@
 // components
 import TestimonialSlider from "../../components/TestimonialSlider";
+import Head from "next/head";
 
 // framer motion
 import { motion } from "framer-motion";
@@ -8,6 +9,9 @@ import { fadeIn } from "../../variants";
 const Testimonials = () => {
   return (
     <div className="h-full bg-primary/30 py-32 text-center">
+      <Head>
+        <title>Indicações | Lucas Lacerda</title>
+      </Head>
       <div className="container mx-auto h-full flex flex-col justify-center">
         {/* title */}
         <motion.h2

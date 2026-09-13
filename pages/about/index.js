@@ -30,6 +30,9 @@ import {
   SiAdobeillustrator,
   SiInvision,
   SiAdobeaftereffects,
+  SiTypescript,
+  SiPython,
+  SiAmazonaws,
 } from "react-icons/si";
 
 //  data
@@ -38,7 +41,7 @@ const aboutData = [
     title: "Habilidades",
     info: [
       {
-        title: "Desenvolvimento Full Stack",
+        title: "Desenvolvimento Full Stack & IA Aplicada",
         icons: [
           <FaHtml5 />,
           <FaCss3 />,
@@ -46,8 +49,10 @@ const aboutData = [
           <FaJs />,
           <FaReact />,
           <SiNextdotjs />,
+          <SiTypescript />,   // TypeScript
           <SiNodedotjs />,      // Node.js
           <SiExpress />,     // Express.js
+          <SiPython />,       // Python
           <FaGit />,         // Git
           <SiDocker />,      // Docker
           <SiMongodb />,     // MongoDB
@@ -58,8 +63,8 @@ const aboutData = [
           <SiFirebase />,     // Firebase
           <FaStripe />,       // Stripe
           <SiCsharp />,       // C#
-          <SiDotnet />        // ASP.NET
-
+          <SiDotnet />,       // ASP.NET
+          <SiAmazonaws />,    // AWS
         ],
 
       },
@@ -68,20 +73,27 @@ const aboutData = [
         icons: [
           <FaFigma />,
           <SiAdobexd />,
-          <SiAdobeillustrator />, // Adicione este ícone, se disponível
-          <SiInvision />, // Adicione este ícone, se disponível
-          <SiAdobeaftereffects /> // Adicione este ícone, se disponível
+          <SiAdobeillustrator />,
+          <SiInvision />,
+          <SiAdobeaftereffects />
         ],
 
       },
     ],
   },
   {
-    title: "Education",
+    title: "Cursos e Certificações",
     info: [
-
       {
         title: "Microsoft Certified: Azure AI Fundamentals",
+        stage: "2023",
+      },
+      {
+        title: "Delivery Accreditation - Stream Connect for Apache Kafka",
+        stage: "2023",
+      },
+      {
+        title: "Desvendando o 5G",
         stage: "2023",
       },
       {
@@ -89,7 +101,7 @@ const aboutData = [
         stage: "2023",
       },
       {
-        title: "CC50: Introdução à Ciência da Computação - Harvard's Course in Brazil",
+        title: "CS50: Introdução à Ciência da Computação - Harvard's Course in Brazil",
         stage: "2023",
       },
       {
@@ -109,11 +121,11 @@ const aboutData = [
         stage: "2023",
       },
       {
-        title: "Figma Training - Alura",
+        title: "Formação Figma - Alura",
         stage: "2023",
       },
       {
-        title: "Programming Logic and Algorithms with C# - Udemy",
+        title: "C# Lógica de Programação e Algoritmos - Udemy",
         stage: "2023",
       },
       {
@@ -131,20 +143,39 @@ const aboutData = [
     title: "Experiência",
     info: [
       {
-        title: "IlumminIT Ltda | Desenvolvedor Web Júnior",
-        stage: "2022 - 2024",
+        title: "Escola SENAI de Informática Cyber IA | Instrutor de Formação Profissional II",
+        stage: "abril de 2025 - atual",
         description: `
-      IlumminIT Ltda é uma empresa de tecnologia focada em soluções de software para otimização de processos empresariais. Durante meu tempo na IlumminIT, fui promovido de Trainee para Desenvolvedor Web Júnior, participando de projetos desafiadores e adquirindo experiência em desenvolvimento Full Stack. Minhas principais responsabilidades incluíam:
+      Instrutor Técnico na unidade SENAI de São Caetano do Sul, formando profissionais em desenvolvimento Full Stack e áreas correlatas.
 
-      Desenvolvimento de Aplicações Web: Contribuí para uma aplicação interna em React e Node.js, integrada a um banco de dados SQL Server, resultando em um aumento de 25% na eficiência dos processos internos.
+      Desenvolvimento de Sistema Interno: projetei e desenvolvi um sistema de gestão de colaboradores para uso interno da unidade, aplicando na prática as mesmas tecnologias e processos que ensino em sala.
 
-      Colaboração em Projetos de E-commerce: Desenvolvi componentes reutilizáveis em React e criei APIs RESTful com Node.js para um cliente do setor varejista, utilizando Stripe para pagamentos e Docker para ambientes consistentes.
+      Desenvolvimento Full Stack: ministro conteúdo prático de front-end (HTML, CSS, JavaScript, React) e back-end, conectando as duas pontas em projetos reais que simulam demandas de mercado.
 
-      Integração com Plataformas de Terceiros: Integrei sistemas internos à plataforma Salesforce, melhorando a gestão de leads e a eficiência da equipe de vendas.
+      Certificações Microsoft: ministro conteúdo preparatório para certificações Microsoft, ajudando alunos a validar formalmente suas competências técnicas junto ao mercado.
 
-      Testes e Qualidade de Código: Criei e mantive testes automatizados com Jest e Cypress, além de participar de revisões de código para garantir boas práticas.
+      Desenvolvimento Mobile: conduzo turmas de programação para dispositivos móveis, do design de interface à publicação de aplicativos.
 
-      Documentação e Manutenção: Responsável pela documentação técnica, incluindo guias e diagramas, e pela manutenção de sistemas legados.
+      Levantamento de Requisitos e UX/UI: ensino elicitação de requisitos, briefing, arquitetura de informação e prototipação em Figma.
+
+      IA Aplicada ao Desenvolvimento: incorporo cada vez mais conteúdo de IA generativa às aulas, aproximando os alunos das ferramentas e práticas que já uso no meu próprio fluxo de trabalho.
+
+      Metodologias Ágeis: aplico Scrum e Kanban na condução de projetos em sala, aproximando os alunos da rotina real de squads de desenvolvimento.
+    `,
+      },
+      {
+        title: "IlumminIT Ltda | Desenvolvedor Full Stack Júnior",
+        stage: "junho de 2022 - abril de 2025",
+        description: `
+      Promovido de Trainee a Desenvolvedor Web Júnior, atuando em desenvolvimento Full Stack em projetos internos e para clientes.
+
+      Aplicação interna de gestão de processos (React + Node.js + SQL Server): implementei novos recursos e otimizei performance, resultando em 25% de aumento na eficiência dos processos internos.
+
+      E-commerce para cliente de varejo: desenvolvi componentes reutilizáveis em React e APIs RESTful em Node.js para catálogo, carrinho e pagamentos, com integração à Stripe API e ambientes padronizados via Docker.
+
+      Integração com Salesforce: conectei sistemas internos via REST e Webhooks para sincronização de dados em tempo real, otimizando a gestão de leads pelo time de vendas.
+
+      Qualidade de código: criação e manutenção de testes automatizados (Jest, Cypress, xUnit) e participação ativa em revisões de código.
     `,
       },
     ],
@@ -154,16 +185,24 @@ const aboutData = [
     title: "Formação",
     info: [
       {
-        title: "FAM Faculdade das Américas - Bachelor of Technology in Analysis and Development of Systems",
-        stage: "2023 - Present",
+        title: "UNIPDS - Pós-graduação Lato Sensu em Engenharia de IA Aplicada",
+        stage: "julho de 2026 - julho de 2027",
       },
       {
-        title: "Senai Informática - SP - Technical Course in Systems Development",
-        stage: "2023 - Present",
+        title: "AIDE Brasil - Formação AI Data Engineer",
+        stage: "agosto de 2026 - janeiro de 2027",
       },
       {
-        title: "Escola Senai 'Paulo Antônio Skaf' - Full-Stack Programmer",
-        stage: "2022 - 2023",
+        title: "Centro Universitário FAM - Bacharelado e Licenciatura em Ciência da Computação",
+        stage: "janeiro de 2024 - julho de 2026",
+      },
+      {
+        title: "Escola SENAI de Informática - Técnico em Desenvolvimento de Sistemas",
+        stage: "fevereiro de 2023 - dezembro de 2024",
+      },
+      {
+        title: "Senai São Paulo - Programador Full-Stack",
+        stage: "maio de 2022 - junho de 2023",
       },
     ],
   },
@@ -172,6 +211,7 @@ const aboutData = [
 // components
 import Avatar from "../../components/Avatar";
 import Circles from "../../components/Circles";
+import Head from "next/head";
 
 // framer motion
 import { motion } from "framer-motion";
@@ -184,6 +224,9 @@ const About = () => {
   const [index, setIndex] = useState(0);
   return (
     <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
+      <Head>
+        <title>Sobre | Lucas Lacerda</title>
+      </Head>
       <Circles />
       {/* avatar img */}
       <motion.div
@@ -213,7 +256,7 @@ const About = () => {
             animate="show"
             exit="hidden"
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 ">
-            Atuando como Desenvolvedor Full Stack, com um foco mais acentuado no desenvolvimento Front-End, tenho trabalhado com tecnologias como React, Next.js, Typescript, Node.js, CSS, HTML, JavaScript, C#, SQL Server e APIs RESTful. Minha experiência envolve tanto a criação de interfaces intuitivas e responsivas quanto a integração com back-ends robustos, oferecendo soluções completas e eficientes.
+            Desenvolvedor Full Stack Pleno com experiência em React, Node.js, TypeScript e C#/.NET, atualmente também Instrutor Técnico no SENAI Informática e aprofundando IA Aplicada (agentes autônomos, RAG e MCP) em pós-graduação. Migrei de uma carreira em Medicina Veterinária para a tecnologia, trazendo análise crítica, resolução de problemas e comunicação assertiva para o desenvolvimento e para a educação técnica. Uso IA de ponta a ponta no meu fluxo de trabalho — da prototipação assistida a arquiteturas com agentes — para entregar soluções completas e eficientes, do front-end ao back-end.
           </motion.p>
           {/* counters */}
           <motion.div
@@ -226,7 +269,7 @@ const About = () => {
               {/* experience */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={2} duration={15} /> +
+                  <CountUp start={0} end={4} duration={15} /> +
                 </div>
                 <div className="text-xs uppercase tracking-wide tracking-[1px] leading-[1.4] max-w-[100px]">Years of experience</div>
               </div>
