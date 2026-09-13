@@ -3,7 +3,6 @@ import Link from "next/link";
 
 // icons
 import {
-  RiInstagramLine,
   RiGithubFill,
   RiMailFill,
   RiLinkedinFill,
@@ -25,13 +24,6 @@ const Socials = () => {
         className="hover:text-accent transition-all duration-300"
       >
         <RiLinkedinFill />
-      </Link>
-      <Link
-        target="_blank"
-        href={"https://www.instagram.com/"}
-        className="hover:text-accent transition-all duration-300"
-      >
-        <RiInstagramLine />
       </Link>
       <Link
         target="_blank"

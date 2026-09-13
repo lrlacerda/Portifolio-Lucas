@@ -8,7 +8,7 @@ const Avatar = () => {
         src={"/Lucas.png"}
         width={737}
         height={678}
-        alt=""
+        alt="Lucas Lacerda"
         className="translate-z-0 w-full h-full"
       />
     </div>

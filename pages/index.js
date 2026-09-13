@@ -35,7 +35,7 @@ const Home = () => {
             animate="show"
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16">
-            Desenvolvedor Full Stack Pleno e Instrutor Técnico SENAI, especializado em React, Node.js, TypeScript e C#/.NET. Aplico IA de ponta a ponta no meu fluxo de trabalho — agentes autônomos, RAG e MCP — para criar soluções digitais completas, elegantes e eficientes, do front-end ao back-end.
+            Desenvolvedor Full Stack Pleno & AI-Native Engineer. React, Node.js, TypeScript, C#/.NET — e IA aplicada de ponta a ponta: agentes, RAG e MCP.
           </motion.p>
           {/* btn */}
           <div className="flex justify-center xl:hidden relative">

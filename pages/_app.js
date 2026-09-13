@@ -7,6 +7,9 @@ import Transition from '../components/Transition';
 // head
 import Head from 'next/head';
 
+// analytics
+import { Analytics } from '@vercel/analytics/react';
+
 // router
 import { useRouter } from 'next/router'
 
@@ -41,6 +44,7 @@ function MyApp({ Component, pageProps }) {
           </motion.div>
         </AnimatePresence>
       </Layout>
+      <Analytics />
     </>
   )
 }

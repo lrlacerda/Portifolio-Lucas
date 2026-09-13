@@ -124,13 +124,26 @@ const WorkSlider = () => {
                     rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}
                     title="Ver código no GitHub"
+                    aria-label="Ver código no GitHub"
                     className="absolute top-2 right-2 z-10 text-xl bg-black/50 rounded-full p-1.5 hover:text-accent transition-colors duration-300"
                   >
                     <RiGithubFill />
                   </a>
                 )}
                 {image.isVideo ? (
-                  <div className="relative flex items-center justify-center group cursor-pointer" onClick={() => openVideo(image.videoSrc)}>
+                  <div
+                    className="relative flex items-center justify-center group cursor-pointer"
+                    role="button"
+                    tabIndex={0}
+                    aria-label={`Ver vídeo: ${image.title}`}
+                    onClick={() => openVideo(image.videoSrc)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        openVideo(image.videoSrc);
+                      }
+                    }}
+                  >
                     <Image src={image.path} width={500} height={300} alt={image.title} className="w-full h-full object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
                     <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 transition-all duration-300">
@@ -148,7 +161,16 @@ const WorkSlider = () => {
                 ) : (
                   <div
                     className="flex items-center justify-center relative overflow-hidden group cursor-pointer"
+                    role="button"
+                    tabIndex={0}
+                    aria-label={`Ver projeto: ${image.title}`}
                     onClick={() => window.open(image.href || "#", "_blank", "noopener,noreferrer")}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        window.open(image.href || "#", "_blank", "noopener,noreferrer");
+                      }
+                    }}
                   >
                     <Image src={image.path} width={500} height={300} alt={image.title} />
                     <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>

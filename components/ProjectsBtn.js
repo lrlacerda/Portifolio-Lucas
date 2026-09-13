@@ -12,6 +12,7 @@ const ProjectsBtn = () => {
     <div className="mx-auto xl:m-0">
       <Link
         href={"/work"}
+        aria-label="Ver projetos"
         className="relative w-[185px] h-[185px] flex justify-center items-center bg-circleStar bg-cover bg-center bg-no-repeat group"
       >
         <Image

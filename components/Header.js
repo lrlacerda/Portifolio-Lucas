@@ -1,6 +1,3 @@
-// next image
-import Image from "next/image";
-
 // next link
 import Link from "next/link";
 
@@ -14,14 +11,7 @@ const Header = () => {
         <div className="flex flex-col lg:flex-row justify-between items-center gap-y-6 py-8">
           {/* logo */}
           <Link href={"/"}>
-            <h1 className="text-3xl flex items-center" priority={true}><b className="px-2">Lucas</b><p className="text-accent">Ribeiro de Lacerda</p></h1>
-            {/* <Image
-              src={"/logo.svg"}
-              width={220}
-              height={48}
-              alt=""
-              priority={true}
-            /> */}
+            <h1 className="text-3xl flex items-center"><b className="px-2">Lucas</b><span className="text-accent">Ribeiro de Lacerda</span></h1>
           </Link>
           {/* socials */}
           <Socials />
