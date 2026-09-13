@@ -1,29 +1,31 @@
 # 💼 Portfólio — Lucas Lacerda
 
-Site pessoal de portfólio, construído com Next.js e Tailwind CSS, apresentando a trajetória profissional de Lucas Lacerda como desenvolvedor full stack. Traz página inicial animada, sobre, serviços, projetos e depoimentos, além de um formulário de contato funcional que envia e-mail via Nodemailer.
+Site pessoal de portfólio, construído com Next.js e Tailwind CSS, apresentando a trajetória profissional de Lucas Lacerda como Desenvolvedor Full Stack Pleno e Instrutor Técnico SENAI, com foco em IA Aplicada (agentes, RAG, MCP).
 
 ## Funcionalidades
 
-- **Home** — apresentação animada com partículas de fundo (`tsparticles`) e chamada para os projetos
-- **Sobre** — resumo profissional e experiência
-- **Serviços** — carrossel (Swiper) com áreas de atuação: Desenvolvedor Full Stack, Front-End, Web e Arquitetura de Soluções
-- **Projetos** — galeria/slider de trabalhos (Hospedagens, Compras Eletrônicos, HBO, Mundo Invertido, Mundo Harry Potter, entre outros)
+- **Home** — apresentação animada com partículas de fundo (`tsparticles`)
+- **Sobre** — resumo profissional, habilidades, cursos/certificações, experiência e formação
+- **Serviços** — carrossel (Swiper) com áreas de atuação: Full Stack, Front-End/UI-UX, IA Aplicada e Mentoria Técnica
+- **Projetos** — galeria/slider de trabalhos, com link para o repositório de cada projeto público e cards de destaque para projetos privados
+- **Artigos** — lista de posts (`/blog`) e página individual (`/blog/[slug]`), com conteúdo em `data/blogPosts.js`
 - **Depoimentos** — carrossel de recomendações
-- **Contato** — formulário validado com Formik + Yup, que envia e-mail através de um servidor Express separado (`server.js`) usando Nodemailer
+- **Contato** — formulário validado com Formik + Yup, que envia e-mail via **Resend** através de uma API route do Next.js (`pages/api/contact.js`), com validação server-side e honeypot anti-spam
 - **Navegação lateral fixa** com ícones e tooltips, com transições de página animadas via Framer Motion
 
 ## Tecnologias
 
 | Tecnologia | Uso |
 |---|---|
-| Next.js 13 (Pages Router) | Framework React |
+| Next.js 16 (Pages Router) | Framework React |
 | React 18 | Biblioteca de UI |
 | Tailwind CSS | Estilização |
 | Framer Motion | Animações e transições de página |
 | tsparticles / react-tsparticles | Efeito de partículas no fundo |
 | Swiper | Carrosséis de serviços, projetos e depoimentos |
 | Formik + Yup | Formulário de contato e validação |
-| Express + Nodemailer | Servidor auxiliar para envio de e-mail do formulário |
+| Resend | Envio de e-mail do formulário de contato (API route serverless) |
+| @vercel/analytics | Analytics |
 | react-countup | Contadores animados |
 
 ## Estrutura
@@ -31,22 +33,23 @@ Site pessoal de portfólio, construído com Next.js e Tailwind CSS, apresentando
 ```
 Portifolio-Lucas/
 ├── pages/
-│   ├── index.js          # home
-│   ├── about/             # sobre
-│   ├── services/          # serviços
-│   ├── work/               # projetos
-│   ├── testimonials/       # depoimentos
-│   ├── contact/             # formulário de contato
-│   └── api/hello.js         # rota de API de exemplo do Next.js
-├── components/            # Nav, Header, sliders, cards, partículas...
-├── server.js               # servidor Express para envio de e-mail
-└── public/                  # imagens dos projetos e assets
+│   ├── index.js            # home
+│   ├── about/               # sobre
+│   ├── services/            # serviços
+│   ├── work/                # projetos
+│   ├── blog/                 # artigos (lista + [slug])
+│   ├── testimonials/         # depoimentos
+│   ├── contact/               # formulário de contato
+│   └── api/contact.js          # API route: envio de e-mail via Resend
+├── components/              # Nav, Header, sliders, cards, partículas...
+├── data/blogPosts.js         # conteúdo dos artigos
+└── public/                    # imagens dos projetos e assets
 ```
 
 ## Pré-requisitos
 
-- Node.js
-- Conta de e-mail configurada para envio via Nodemailer (para o formulário de contato funcionar)
+- Node.js 18+
+- Conta gratuita na [Resend](https://resend.com) para o formulário de contato funcionar
 
 ## Como executar
 
@@ -56,19 +59,22 @@ cd Portifolio-Lucas
 npm install
 ```
 
-Crie um `.env` na raiz com as credenciais usadas pelo `server.js`:
+Copie `.env.example` para `.env` e preencha:
 
 ```bash
-EMAIL_USER=seu-email@gmail.com
-EMAIL_PASS=sua-senha-de-app
-PORT=3001
+RESEND_API_KEY=
+CONTACT_FROM_EMAIL=onboarding@resend.dev
+CONTACT_TO_EMAIL=seu-email@gmail.com
 ```
 
 ```bash
 npm run dev     # inicia o Next.js em modo desenvolvimento
 npm run build   # build de produção
 npm run start   # roda o build de produção
-node server.js  # inicia o servidor de envio de e-mail (formulário de contato)
 ```
 
 Abra [http://localhost:3000](http://localhost:3000).
+
+## Deploy
+
+O projeto está pronto para deploy na [Vercel](https://vercel.com) — basta conectar o repositório e configurar as variáveis de ambiente (`RESEND_API_KEY`, `CONTACT_FROM_EMAIL`, `CONTACT_TO_EMAIL`) no painel do projeto.
