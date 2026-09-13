@@ -4,6 +4,7 @@ import {
   RxDesktop,
   RxCode,
   RxReader,
+  RxLightningBolt,
   RxArrowTopRight,
 } from "react-icons/rx";
 
@@ -17,18 +18,25 @@ const serviceData = [
       "Construo aplicações web completas com React, Next.js, Node.js, TypeScript e C#/.NET, integrando APIs REST, bancos de dados relacionais e não relacionais e serviços em nuvem. Foco em performance, boas práticas e código sustentável, do design da arquitetura à entrega.",
   },
   {
+    icon: <RxReader />,
+    title: "Agentes de IA & RAG",
+    description: "Arquitetura de agentes autônomos e RAG.",
+    moreDescription:
+      "Projeto e implemento arquiteturas de agentes autônomos e RAG (Retrieval-Augmented Generation) usando MCP (Model Context Protocol) para conectar LLMs a dados e ferramentas reais. Aprofundo esse tema na pós-graduação em Engenharia de IA Aplicada e na formação em AI Data Engineering.",
+  },
+  {
+    icon: <RxLightningBolt />,
+    title: "Integração de LLMs & Automação",
+    description: "OpenAI, Anthropic e Azure AI aplicados a produtos reais.",
+    moreDescription:
+      "Integro LLMs de diferentes provedores (OpenAI, Anthropic/Claude, Azure AI Foundry) em produtos e fluxos de trabalho reais — de assistentes que automatizam tarefas do dia a dia a prototipação assistida por IA, do design da solução ao deploy em produção.",
+  },
+  {
     icon: <RxCrop />,
     title: "Front-End & UI/UX",
     description: "Interfaces modernas, responsivas e acessíveis.",
     moreDescription:
       "Crio interfaces intuitivas e responsivas com React, Tailwind CSS e Framer Motion, com atenção a usabilidade, performance e consistência visual. Uso Figma para prototipação e para conectar a etapa de design à implementação técnica.",
-  },
-  {
-    icon: <RxReader />,
-    title: "IA Aplicada & Automação",
-    description: "Agentes de IA, RAG e integração com LLMs.",
-    moreDescription:
-      "Aplico IA de ponta a ponta no desenvolvimento: arquitetura de agentes autônomos, RAG (Retrieval-Augmented Generation) e MCP (Model Context Protocol) para integrar LLMs em sistemas de produção, do design da arquitetura ao deploy.",
   },
   {
     icon: <RxCode />,
