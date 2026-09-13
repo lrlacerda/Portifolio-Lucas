@@ -48,29 +48,31 @@ const BlogPost = ({ post }) => {
           </Link>
         </motion.div>
 
-        <motion.div
-          variants={fadeIn("up", 0.2)}
-          initial="hidden"
-          animate="show"
-          exit="hidden"
-        >
-          <div className="text-xs uppercase tracking-widest text-white/50 mb-2">
-            {new Date(post.date).toLocaleDateString("pt-BR")} · {post.readTime} min de leitura
-          </div>
-          <h1 className="h2 mb-8">{post.title}</h1>
-        </motion.div>
+        <div className="max-h-[65vh] xl:max-h-[70vh] overflow-y-auto hide-scrollbar pr-2">
+          <motion.div
+            variants={fadeIn("up", 0.2)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+          >
+            <div className="text-xs uppercase tracking-widest text-white/50 mb-2">
+              {new Date(post.date).toLocaleDateString("pt-BR")} · {post.readTime} min de leitura
+            </div>
+            <h1 className="h2 mb-8">{post.title}</h1>
+          </motion.div>
 
-        <motion.div
-          variants={fadeIn("up", 0.3)}
-          initial="hidden"
-          animate="show"
-          exit="hidden"
-          className="flex flex-col gap-y-4 text-white/70 text-lg"
-        >
-          {post.content.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))}
-        </motion.div>
+          <motion.div
+            variants={fadeIn("up", 0.3)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="flex flex-col gap-y-4 text-white/70 text-lg"
+          >
+            {post.content.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </div>
   );
