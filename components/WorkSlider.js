@@ -111,7 +111,7 @@ const WorkSlider = () => {
     >
       {projectPages.map((page, pageIndex) => (
         <SwiperSlide key={pageIndex}>
-          <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer mt-[60px]">
+          <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer pt-[60px] h-full">
             {page.map((image, imageIndex) => (
               <div className="relative rounded-lg overflow-hidden flex items-center justify-center group" key={imageIndex}>
                 {image.repoHref && (
